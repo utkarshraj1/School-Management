@@ -1,0 +1,28 @@
+.logo {
+    position: absolute;
+    width: 186px;
+    height: 36px;
+    left: 45px;
+    top: 45px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    .logo-text {
+        font-family: 'Palette Mosaic', cursive;
+        font-size: 24px
+    }
+}
+.form {
+    position: absolute;
+    width: 328px;
+    height: 330px;
+    left: 211px;
+    top: 170px;
+    // border: 1px solid black;
+}
+.card-list {
+    position: absolute;
+    width: 560px;
+    height: 547px;
+    left: 749px;
+    top: 40px;
+    // border: 1px solid black;
+}
