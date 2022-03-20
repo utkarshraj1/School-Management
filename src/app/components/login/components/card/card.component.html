@@ -1,1 +1,9 @@
-<p>card works!</p>
+<div class="carousal-container">
+    <ngb-carousel *ngIf="images" [showNavigationIndicators]="true" [showNavigationArrows]="false">
+        <ng-template ngbSlide *ngFor="let image of images">
+            <div class="picsum-img-wrapper">
+                <img [src]="image" alt="Random slide" class="carousal-image">
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>

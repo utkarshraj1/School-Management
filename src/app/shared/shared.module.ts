@@ -8,6 +8,7 @@ import { ShortenPipe } from './pipes/shorten.pipe';
 import { DoughnutComponent } from './components/doughnut/doughnut.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { DataTableComponent } from './components/data-table/data-table.component
         ErrorPageComponent,
         DoughnutComponent,
         LineChartComponent,
-        DataTableComponent
+        DataTableComponent,
+        LogoComponent
     ],
     imports: [
         CommonModule,
@@ -30,7 +32,8 @@ import { DataTableComponent } from './components/data-table/data-table.component
         ErrorPageComponent,
         DoughnutComponent,
         LineChartComponent,
-        DataTableComponent
+        DataTableComponent,
+        LogoComponent
     ],
     providers: []
 })
