@@ -1,0 +1,33 @@
+                    <>SchoolZilla<>
+
+Created By: Utkarsh Raj
+
+<!--
+<Folder>
+(File)
+{Contains}
+--!>
+
+Project Structure:
+<components> = {
+    <feature-names> (accountant, data-analyst, login, student, super-user, teacher) = {
+        <components> = { It has all child components for a specific feature }
+        <models> = { It contains the interface for type }
+        (routing file) = { It is for internal routing purpose }
+        (parent component) = { It contains all the child components }
+        (module) = { It has all the pre-defined and custom modules imported for usage }
+    }
+}
+
+<shared> = {
+    (shared module) = { It has all the shared components, material modules, pipes declared and exported for usage }
+    <components> = { It has all the shared components that will be throughout the feature dashboards }
+    <modules> = { It has all the material modules and other modules declared to keep app.module lean }
+    <pipe> = { It contains all the necessary pipes for transforming data at the view level }
+    <services> = { It contains all shared methods that will be used throughout the feature dashboards }
+    <static> = { It contains all the static files related to view, or urls, etc }
+}
+
+<assets> = {
+    It has all the assets like carousal images, avatars, etc.
+}

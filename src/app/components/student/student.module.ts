@@ -2,6 +2,8 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { StudentRoutingModule } from "./student-routing.module";
 import { StudentComponent } from "./student.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { SharedModule } from "src/app/shared/shared.module";
 
 @NgModule({
     declarations: [
@@ -9,7 +11,9 @@ import { StudentComponent } from "./student.component";
     ],
     imports: [
         CommonModule,
-        StudentRoutingModule
+        StudentRoutingModule,
+        NgbModule,
+        SharedModule
     ],
     providers: []
 })
