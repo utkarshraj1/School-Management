@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedMethodsService {
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(private snackBar: MatSnackBar,
+    private cookieService: CookieService) { }
 
   /**
    * To open the material snackbar, returns void
@@ -18,5 +20,14 @@ export class SharedMethodsService {
     this.snackBar.open(message, closeButtonText, {
       duration: duration
     });
+  }
+
+  /**
+   * Sets the cookie data that can be used later, returns void
+   * @param key - string identifier for the data
+   * @param data - data to be stored and shared throughout the application
+   */
+  setCookieData(key: string, data: any): void {
+    this.cookieService.set(key, data);
   }
 }
