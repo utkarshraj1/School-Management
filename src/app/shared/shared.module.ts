@@ -9,6 +9,7 @@ import { DoughnutComponent } from './components/doughnut/doughnut.component';
 import { LineChartComponent } from './components/line-chart/line-chart.component';
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { LogoComponent } from './components/logo/logo.component';
     ],
     imports: [
         CommonModule,
-        MaterialModule
+        MaterialModule,
+        HttpClientModule
     ],
     exports: [
         MaterialModule,

@@ -1,3 +1,6 @@
+// Variables
+$primary-color: #9970DE;
+
 .logo {
     width: 186px;
     height: 36px;
@@ -21,6 +24,9 @@
     .social-link {
         text-decoration: none;
         color: black;
+        &:hover {
+            color: $primary-color;
+        }
     }
 }
 

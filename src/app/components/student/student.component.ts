@@ -10,6 +10,7 @@ export class StudentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(JSON.parse(localStorage.getItem('student_info') || ''));
   }
 
 }

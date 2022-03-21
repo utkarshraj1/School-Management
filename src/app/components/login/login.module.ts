@@ -8,6 +8,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SharedModule } from "src/app/shared/shared.module";
 import { MaterialModule } from "src/app/shared/modules/material.module";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { CookieService } from "ngx-cookie-service";
 
 @NgModule({
     declarations: [
@@ -23,6 +24,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
         NgbModule,
         SharedModule
     ],
-    providers: []
+    providers: [CookieService]
 })
 export class LoginModule { }
