@@ -1,3 +1,19 @@
-<app-header></app-header>
-<p>Student Component Here</p>
-<app-footer></app-footer>
+<div class="dashboard-header">
+    <app-header></app-header>
+</div>
+<div class="dashboard-container">
+    AB
+</div>
+<div class="dashboard-footer">
+    <app-footer></app-footer>
+</div>
+
+<!--Loading Starts-->
+<ng-container *ngIf="loading">
+    <div class="backdrop position-fixed">
+    </div>
+    <div class="loading position-absolute">
+        <app-loading-box></app-loading-box>
+    </div>
+</ng-container>
+<!--Loading Ends-->

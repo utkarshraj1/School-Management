@@ -4,6 +4,8 @@ import { StudentRoutingModule } from "./student-routing.module";
 import { StudentComponent } from "./student.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { SharedModule } from "src/app/shared/shared.module";
+import { FormsModule } from "@angular/forms";
+import { CookieService } from "ngx-cookie-service";
 
 @NgModule({
     declarations: [
@@ -12,9 +14,10 @@ import { SharedModule } from "src/app/shared/shared.module";
     imports: [
         CommonModule,
         StudentRoutingModule,
+        FormsModule,
         NgbModule,
-        SharedModule
+        SharedModule,
     ],
-    providers: []
+    providers: [CookieService]
 })
 export class StudentModule { }

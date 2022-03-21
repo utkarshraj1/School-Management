@@ -10,6 +10,7 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HttpClientModule } from "@angular/common/http";
+import { LoadingBoxComponent } from './components/loading-box/loading-box.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from "@angular/common/http";
         DoughnutComponent,
         LineChartComponent,
         DataTableComponent,
-        LogoComponent
+        LogoComponent,
+        LoadingBoxComponent
     ],
     imports: [
         CommonModule,
@@ -35,7 +37,8 @@ import { HttpClientModule } from "@angular/common/http";
         DoughnutComponent,
         LineChartComponent,
         DataTableComponent,
-        LogoComponent
+        LogoComponent,
+        LoadingBoxComponent
     ],
     providers: []
 })

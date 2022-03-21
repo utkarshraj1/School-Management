@@ -1,0 +1,34 @@
+// variables
+$padding-x: 22px;
+
+.header-container {
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    padding-top: 28px;
+    .logo-container {
+        // margin: 10px 0px 0px 10px;
+        padding-left: $padding-x;
+    }
+    .profile-container {
+        padding-right: $padding-x;
+    }
+    .profile-list {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        background-color: white;
+        opacity: 90%;
+        width: 160px;
+        margin-right: 28px;
+        border-radius: 8px 0px 8px 8px;
+        .details {
+            font-family: 'Varela Round', sans-serif;
+        }
+    }
+    .avatar-image {
+        border-radius: 25px;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid rgba(0,0,0,0.16);
+        }
+    }
+}

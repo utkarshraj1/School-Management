@@ -1,1 +1,31 @@
-<p>header works!</p>
+<div class="header-container d-flex justify-content-between">
+    <div class="logo-container">
+        <app-logo></app-logo>
+    </div>
+    <div>
+        <div class="profile-container text-right">
+            <img matTooltip="Profile Menu" [src]="avatarImgs[0]" width="40px" height="40px" class="avatar-image"
+                (click)="openProfileMenu()">
+        </div>
+        <div class="profile-list pt-3" [ngStyle]="{ 'display': profileMenuVisibility ? 'block' : 'none' }">
+            <div matTooltip="Avatars" class="avatar-section d-flex justify-content-around">
+                <ng-container *ngFor="let avatar of avatarImgs">
+                    <img [src]="avatar" width="40px" height="40px" class="avatar-image" (click)="selectAvatar(avatar)">
+                </ng-container>
+            </div>
+            <hr>
+            <div class="details-section">
+                <p class="pl-2 details">Name: {{userDetails.name}}</p>
+                <p class="pl-2 details">Class: {{userDetails.class}}</p>
+                <div class="d-flex justify-content-around">
+                    <button mat-icon-button matTooltip="Share your feedback">
+                        <mat-icon>chat</mat-icon>
+                    </button>
+                    <button mat-icon-button matTooltip="Logout">
+                        <mat-icon>logout</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

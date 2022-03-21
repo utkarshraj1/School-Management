@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
+  loading: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
     console.log(JSON.parse(localStorage.getItem('student_info') || ''));
+    // this.loading = true;
+    // setTimeout(() => {
+    //   this.loading = false;
+    // }, 4000);
   }
 
 }
