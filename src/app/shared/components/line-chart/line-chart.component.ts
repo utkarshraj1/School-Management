@@ -20,21 +20,25 @@ export class LineChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const data = [69.2, 75.1, 82.8, 86.8, 91.2];
+    const label = '%age';
+    const xAxisLabels = ['6', '7', '8', '9', '10'];
+
     this.lineChartData = {
       datasets: [
         {
-          data: [69.2, 75.1, 82.8, 86.8, 91.2],
-          label: '%age',
+          data: data,
+          label: label,
           backgroundColor: 'transparent',
-          borderColor: chartColors.success.hover,
-          pointBackgroundColor: chartColors.error.main,
-          pointHoverBackgroundColor: chartColors.error.hover,
+          borderColor: chartColors['line-chart'].line,
+          pointBackgroundColor: chartColors['line-chart'].point.main,
+          pointHoverBackgroundColor: chartColors['line-chart'].point.hover,
           pointBorderColor: '#fff',
           pointHoverBorderColor: '#fff',
           fill: 'true'
         }
       ],
-      labels: ['6', '7', '8', '9', '10']
+      labels: xAxisLabels
     };
     this.lineChartOptions = {
       elements: {

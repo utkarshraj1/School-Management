@@ -4,3 +4,10 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 772px) {
+    .dn-class {
+        display: flex;
+        justify-content: center;
+    }
+}

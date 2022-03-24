@@ -3,10 +3,10 @@
 </div>
 <div class="dashboard-container d-flex">
     <div class="side-nav">
-        <app-side-nav></app-side-nav>
+        <app-side-nav [sidenav]="sideNavRouteDetails"></app-side-nav>
     </div>
     <div class="content-container">
-        <app-dashboard></app-dashboard>
+        <router-outlet></router-outlet>
     </div>
 </div>
 <div class="dashboard-footer">

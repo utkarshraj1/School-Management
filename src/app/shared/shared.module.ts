@@ -14,6 +14,7 @@ import { LoadingBoxComponent } from './components/loading-box/loading-box.compon
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 import { NgChartsModule } from "ng2-charts";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { NgChartsModule } from "ng2-charts";
         CommonModule,
         MaterialModule,
         HttpClientModule,
-        NgChartsModule
+        NgChartsModule,
+        RouterModule
     ],
     exports: [
         MaterialModule,

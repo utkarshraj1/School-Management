@@ -2,7 +2,17 @@
 $color: #F5F6FA;
 
 .side-nav-container {
-    min-height: 100vh;
+    height: 100%;
     background-color: white;
     border-bottom: 1px solid $color;
+    .route-container {
+        min-height: 50%;
+        .anchor {
+            text-decoration: none;
+            color: rgba(153, 112, 222, 1);
+        }
+        .active {
+            color: rgba(183, 28, 28, 1);
+        }
+    }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { ICourseTable } from '../../models/courseTable.model';
 
 @Component({
@@ -8,12 +10,14 @@ import { ICourseTable } from '../../models/courseTable.model';
 })
 export class DataTableComponent implements OnInit {
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   ELEMENT_DATA: ICourseTable[] = [
-    { position: 1, course: 'Hydrogen', teacher: 'A' },
-    { position: 2, course: 'Helium', teacher: 'B' },
-    { position: 3, course: 'Lithium', teacher: 'C' },
-    { position: 4, course: 'Beryllium', teacher: 'D' },
-    { position: 5, course: 'Boron', teacher: 'E' },
+    { position: 1, course: 'Sanskrit', teacher: 'S Tiwary' },
+    { position: 2, course: 'English', teacher: 'SB Raman' },
+    { position: 3, course: 'Hindi', teacher: 'SUman Mehrotra' },
+    { position: 4, course: 'Science', teacher: 'Mithilesh Sinha' },
+    { position: 5, course: 'Social Science', teacher: 'Amresh Kumar' },
   ];
 
   columns = [
@@ -33,12 +37,16 @@ export class DataTableComponent implements OnInit {
       cell: (element: any) => `${element['teacher']}`,
     }
   ];
-  dataSource = this.ELEMENT_DATA;
+  dataSource = new MatTableDataSource<ICourseTable>(this.ELEMENT_DATA);
   displayedColumns = this.columns.map(c => c.columnDef);
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this.dataSource.paginator = this.paginator;
   }
 
 }

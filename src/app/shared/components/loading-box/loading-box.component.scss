@@ -4,14 +4,14 @@ $backdrop-color: rgba(153, 112, 222, 0.31);
 .loading {
   top: 48%;
   left: 48%;
-  z-index: 10;
+  z-index: 101;
   background: none;
 }
 .backdrop {
   width: 100%;
   height: 100vh;
   top: 0;
-  z-index: 10;
+  z-index: 101;
   left: 0;
   background-color: $backdrop-color;
   animation: backdrop-effect 0.5s ease 0s 1 normal none;
