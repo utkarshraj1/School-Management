@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -23,13 +24,6 @@ export class HeaderComponent implements OnInit {
     } else {
       this.avatarImgs = ["femaletype1.png", "femaletype2.png"].map(img => `../../../../assets/avatars/${img}`);
     }
-  }
-
-  /**
-   * opens the profile menu by changing the menu visibility flag, returns void
-   */
-  openProfileMenu(): void {
-    this.profileMenuVisibility = !this.profileMenuVisibility;
   }
 
   /**

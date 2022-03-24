@@ -8,6 +8,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 
 const MaterialItemModules = [
     MatIconModule,
@@ -16,7 +22,13 @@ const MaterialItemModules = [
     MatButtonModule,
     MatProgressSpinnerModule,
     MatSnackBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDividerModule,
+    MatGridListModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatCardModule,
+    MatTableModule
 ];
 
 @NgModule({

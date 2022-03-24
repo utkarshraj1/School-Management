@@ -1,31 +1,19 @@
-// Variables
-$backdrop-color: rgba(153, 112, 222, 0.31);
+// variables
+$color: #F5F6FA;
 
 * {
-  background-color: #F5F6FA;
+  background-color: $color;
 }
-
-.loading {
-  top: 48%;
-  left: 48%;
-  z-index: 10;
-  background: none;
+.dashboard-container {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 15;
 }
-.backdrop {
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    z-index: 10;
-    left: 0;
-    background-color: $backdrop-color;
-    animation: backdrop-effect 0.5s ease 0s 1 normal none;
+.side-nav {
+  width: 100px;
+  z-index: 5;
 }
-
-@keyframes backdrop-effect {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+.content-container {
+  width: calc(100% - 100px);
+  border: 1px solid grey;
 }

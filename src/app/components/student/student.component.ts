@@ -16,7 +16,7 @@ export class StudentComponent implements OnInit {
     // this.loading = true;
     // setTimeout(() => {
     //   this.loading = false;
-    // }, 4000);
+    // }, 3000);
   }
 
 }

@@ -1,1 +1,11 @@
-<p>doughnut works!</p>
+<mat-card class="doughnut-card">
+    <mat-card-header class="d-flex justify-content-center align-items-center">
+        <mat-card-title>Your Classroom Info</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content-container">
+        <div class="doughnut-container" style="display: block">
+            <canvas baseChart [data]="doughnutChartData" [type]="doughnutChartType">
+            </canvas>
+        </div>
+    </mat-card-content>
+</mat-card>
