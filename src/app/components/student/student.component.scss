@@ -1,0 +1,20 @@
+// variables
+$color: #F5F6FA;
+
+* {
+  background-color: $color;
+}
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.dashboard-container {
+  width: 100%;
+}
+.side-nav {
+  width: 80px;
+}
+.content-container {
+  width: calc(100% - 80px);
+}

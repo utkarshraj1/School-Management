@@ -58,7 +58,6 @@ export class FormComponent implements OnInit {
             // Credential dispatched to the parent component
             this.loginCredentials.emit(authRes);
           }
-          this.buttonLoadingShow = false;
         },
         (err) => {
           console.error(err);

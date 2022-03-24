@@ -1,0 +1,17 @@
+.doughnut-card {
+    border-radius: 20px;
+    width: 289px;
+}
+.content-container {
+    text-align: -webkit-center;
+    .doughnut-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .doughnut-card {
+        width: 268px;
+    }
+}

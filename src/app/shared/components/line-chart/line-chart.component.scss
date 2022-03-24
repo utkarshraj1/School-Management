@@ -1,0 +1,29 @@
+.line-chart-card {
+    border-radius: 20px;
+    width: 670px;
+    .chart-container {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 796px) {
+    .line-chart-card {
+        width: 570px;
+    }
+}
+@media screen and (max-width: 694px) {
+    .line-chart-card {
+        width: 470px;
+    }
+}
+@media screen and (max-width: 594px) {
+    .line-chart-card {
+        width: 370px;
+    }
+}
+@media screen and (max-width: 494px) {
+    .line-chart-card {
+        width: 290px;
+    }
+}

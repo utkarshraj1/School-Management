@@ -1,0 +1,29 @@
+// variables
+$hover-color: rgba(153, 112, 222, 0.1);
+
+.table-container {
+  border-radius: 20px;
+  .demo-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+    .mat-row .mat-cell {
+      border-bottom: 1px solid transparent;
+      border-top: 1px solid transparent;
+      cursor: pointer;
+    }
+    .header-part {
+      background-color: $hover-color;
+    }
+    .mat-row:hover .mat-cell {
+      background-color: $hover-color;
+    }
+    .demo-row-is-clicked {
+      font-weight: bold;
+    }
+  }
+  .paginator-border {
+    border-radius: 0px 0px 20px 20px
+  }
+}

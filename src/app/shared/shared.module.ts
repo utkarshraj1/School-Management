@@ -10,6 +10,11 @@ import { LineChartComponent } from './components/line-chart/line-chart.component
 import { DataTableComponent } from './components/data-table/data-table.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HttpClientModule } from "@angular/common/http";
+import { LoadingBoxComponent } from './components/loading-box/loading-box.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
+import { NgChartsModule } from "ng2-charts";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -20,12 +25,17 @@ import { HttpClientModule } from "@angular/common/http";
         DoughnutComponent,
         LineChartComponent,
         DataTableComponent,
-        LogoComponent
+        LogoComponent,
+        LoadingBoxComponent,
+        SideNavComponent,
+        NoticeBoardComponent
     ],
     imports: [
         CommonModule,
         MaterialModule,
-        HttpClientModule
+        HttpClientModule,
+        NgChartsModule,
+        RouterModule
     ],
     exports: [
         MaterialModule,
@@ -35,7 +45,10 @@ import { HttpClientModule } from "@angular/common/http";
         DoughnutComponent,
         LineChartComponent,
         DataTableComponent,
-        LogoComponent
+        LogoComponent,
+        LoadingBoxComponent,
+        SideNavComponent,
+        NoticeBoardComponent
     ],
     providers: []
 })

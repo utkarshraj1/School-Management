@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ISideNavRouteDetails } from 'src/app/shared/models/sideNavRouteDetails.model';
 
 @Component({
   selector: 'app-student',
@@ -7,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
+  loading: boolean;
+  sideNavRouteDetails: Array<ISideNavRouteDetails>;
+
   constructor() { }
 
   ngOnInit(): void {
     console.log(JSON.parse(localStorage.getItem('student_info') || ''));
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+
+    this.sideNavRouteDetails = [
+      { name: 'Dashboard', icon: 'dashboard', routerVal: '/student/' },
+      { name: 'Courses', icon: 'auto_stories', routerVal: '/student/courses' },
+      { name: 'Exam Results', icon: 'fact_check', routerVal: '/student/exam-results' },
+      { name: 'Personal Info', icon: 'portrait', routerVal: '/student/info' }
+    ];
   }
 
 }
