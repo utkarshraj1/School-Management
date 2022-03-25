@@ -15,6 +15,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 import { NgChartsModule } from "ng2-charts";
 import { RouterModule } from "@angular/router";
+import { DataCardComponent } from './components/data-card/data-card.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { RouterModule } from "@angular/router";
         LogoComponent,
         LoadingBoxComponent,
         SideNavComponent,
-        NoticeBoardComponent
+        NoticeBoardComponent,
+        DataCardComponent
     ],
     imports: [
         CommonModule,
@@ -48,7 +50,8 @@ import { RouterModule } from "@angular/router";
         LogoComponent,
         LoadingBoxComponent,
         SideNavComponent,
-        NoticeBoardComponent
+        NoticeBoardComponent,
+        DataCardComponent
     ],
     providers: []
 })

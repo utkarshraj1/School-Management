@@ -1,1 +1,9 @@
-<p>exam-results works!</p>
+<h2 class="ml-3 mt-3">Student | Results</h2>
+<div class="results-page pt-4 d-flex flex-column align-items-center">
+    <div class="year-filter mb-4 w-75 text-right">
+        DropDown
+    </div>
+    <div class="table-container">
+        <app-data-table [dataColumns]="dataColumns" [data]="rowData"></app-data-table>
+    </div>
+</div>

@@ -10,7 +10,7 @@
             <app-line-chart></app-line-chart>
         </div>
         <div class="col-md-8 py-3">
-            <app-data-table></app-data-table>
+            <app-data-table [dataColumns]="dataColumn" [data]="rowData"></app-data-table>
         </div>
         <div class="col-md-4 py-3 d-flex justify-content-center align-items-center">
             <app-notice-board></app-notice-board>
