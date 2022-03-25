@@ -1,0 +1,38 @@
+// Variables
+$primary-color: #9970de;
+$secondary-color: #b71c1c;
+$hover-color: rgba(153, 112, 222, 0.1);
+
+.data-card {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+    ::ng-deep.mat-card-header-text {
+        margin: 0;
+    }
+    &:hover {
+        background-color: $hover-color;
+    }
+    .icon-style {
+        color: $primary-color;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    .header-part {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .title-container {
+            font-size: 16px;
+        }
+        .subtitle-container {
+            font-size: 12px;
+        }
+    }
+    .content-part {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+    }
+}
