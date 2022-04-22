@@ -55,7 +55,7 @@ export class LineChartComponent implements OnInit {
       plugins: {
         legend: { display: true },
       },
-      aspectRatio: 2.5,
+      aspectRatio: 3,
       maintainAspectRatio: true
     };
   }
