@@ -1,4 +1,15 @@
 <h2 class="ml-3 mt-3">Student | Personal Information</h2>
-<div class="personal-info-container">
-
+<div class="container pt-3 mb-3 text-center d-flex justify-content-center">
+    <div class="p-4 personal-info-container mat-elevation-z8 d-flex justify-content-around">
+        <div class="column-1">
+            Column with Details
+        </div>
+        <div class="column-2">
+            <div class="image-container mat-elevation-z1">
+                <img [src]="image" alt="Profile Image"
+                    [matTooltip]="gender.toLowerCase() === 'male' ? 'Male' : 'Female'" class="image"
+                    [matTooltipPosition]="'right'">
+            </div>
+        </div>
+    </div>
 </div>

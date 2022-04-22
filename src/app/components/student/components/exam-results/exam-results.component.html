@@ -1,9 +1,58 @@
 <h2 class="ml-3 mt-3">Student | Results</h2>
 <div class="results-page pt-4 d-flex flex-column align-items-center">
     <div class="year-filter mb-4 w-75 text-right">
-        DropDown
+        <button matTooltip="Know about the abbreviations" matTooltipPosition="left" mat-icon-button class="icon mr-2"
+            (click)="abbShow=!abbShow">
+            <mat-icon>info</mat-icon>
+        </button>
+        <div *ngIf="abbShow" class="boxes pt-4 px-4 data-container mat-elevation-z8 text-center">
+            <ng-template *ngTemplateOutlet="abbTable"></ng-template>
+        </div>
+        <mat-form-field class="class-dropdown" color="black" appearance="outline">
+            <mat-label>Class</mat-label>
+            <mat-select [(value)]="selectedClass">
+                <mat-option *ngFor="let class of classDropdownValues" [value]="class">{{class}}</mat-option>
+            </mat-select>
+        </mat-form-field>
     </div>
     <div class="table-container">
         <app-data-table [dataColumns]="dataColumns" [data]="rowData"></app-data-table>
+        <div class="results-section p-4 mat-elevation-z8 my-3 d-flex justify-content-between flex-wrap">
+            <div class="result">
+                Results: Pass
+            </div>
+            <div class="score">
+                Score: 83.3
+            </div>
+        </div>
     </div>
 </div>
+
+<ng-template #abbTable>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Abbreviation</th>
+                <th scope="col">Full Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>F</td>
+                <td>Fail</td>
+            </tr>
+            <tr>
+                <td>P</td>
+                <td>Pass</td>
+            </tr>
+            <tr>
+                <td>NA</td>
+                <td>Not Allowed</td>
+            </tr>
+            <tr>
+                <td>UFM</td>
+                <td>Unfair Means</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

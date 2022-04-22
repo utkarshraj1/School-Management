@@ -8,25 +8,31 @@ $color: #F5F6FA;
     height: 80px;
     padding-top: 28px;
     border-color: 1px solid $color;
+
     .logo-container {
         padding-left: $padding-x;
     }
+
     .profile-container {
         padding-right: $padding-x;
     }
+
     .profile-list {
         .details {
             font-family: 'Varela Round', sans-serif;
         }
     }
+
     .avatar-image {
         border-radius: 25px;
         cursor: pointer;
+
         &:hover {
-            border: 1px solid rgba(0,0,0,0.16);
+            border: 1px solid rgba(0, 0, 0, 0.16);
         }
     }
-}
-::ng-deep.mat-menu-custom {
-    width: 180px;
+
+    .mat-panel {
+        min-width: 180px;
+    }
 }

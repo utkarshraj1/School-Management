@@ -16,6 +16,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 const MaterialItemModules = [
     MatIconModule,
@@ -32,7 +34,9 @@ const MaterialItemModules = [
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
-    MatRippleModule
+    MatRippleModule,
+    MatSelectModule,
+    MatProgressBarModule
 ];
 
 @NgModule({

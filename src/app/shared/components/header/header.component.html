@@ -7,7 +7,7 @@
             <img matTooltip="Profile Menu" [src]="avatarImgs[0]" width="40px" height="40px" class="avatar-image"
                 [matMenuTriggerFor]="profileMenu">
         </div>
-        <mat-menu #profileMenu="matMenu" class="mat-menu-custom px-2">
+        <mat-menu #profileMenu="matMenu" class="mat-menu-custom px-2" panelClass="mat-panel">
             <div matTooltip="Avatars" [matTooltipPosition]="'left'"
                 class="avatar-section d-flex justify-content-around pb-2">
                 <ng-container *ngFor="let avatar of avatarImgs">
