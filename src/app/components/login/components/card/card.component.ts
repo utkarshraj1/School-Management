@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.images = ['carousalimg1', 'carousalimg2'].map((n) => `../../../../../assets/${n}.png`);
+    this.images = ['carousalimg1', 'carousalimg2'].map((n) => `../../../../../assets/carousals/${n}.png`);
   }
 
 }
