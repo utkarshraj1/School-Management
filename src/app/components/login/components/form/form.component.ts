@@ -3,8 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedMethodsService } from 'src/app/shared/services/shared-methods.service';
 import { ILoginCredentials } from '../../models/loginCredentials';
 import { mat_icons } from 'src/app/shared/static/material-icons';
-import { api_urls, api_key } from '../../../../shared/static/important-urls';
 import { CrudMethodsService } from 'src/app/shared/services/crud-methods.service';
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -14,11 +14,9 @@ export class FormComponent implements OnInit {
 
   buttonLoadingShow: boolean;
   loginForm: FormGroup;
-  @Output() loginCredentials: EventEmitter<ILoginCredentials> = new EventEmitter<ILoginCredentials>();
   materialIcons: any;
-  // signUpAuthUrl: string = api_urls['authentication_sign_up_api_url'];
-  signInAuthUrl: string = api_urls.authentication_sign_in_api_url;
-  apiKey: string = api_key;
+
+  @Output() loginCredentials: EventEmitter<ILoginCredentials> = new EventEmitter<ILoginCredentials>();
 
   constructor(private shared: SharedMethodsService,
     private crudMethods: CrudMethodsService) { }
@@ -46,25 +44,6 @@ export class FormComponent implements OnInit {
     else {
       this.buttonLoadingShow = true;
       // Sign in
-      this.crudMethods.postMethod(`${this.signInAuthUrl}${this.apiKey}`, {
-        email: form.value.email,
-        password: form.value.password,
-        returnSecureToken: true
-      }).subscribe(
-        (authRes) => {
-          // console.log(authRes);
-          if (authRes.registered) {
-            console.log('Welcome');
-            // Credential dispatched to the parent component
-            this.loginCredentials.emit(authRes);
-          }
-        },
-        (err) => {
-          console.error(err);
-          const errorMsg = err.error.error.message;
-          this.errorMessageShow(errorMsg);
-          this.buttonLoadingShow = false;
-        });
     }
   }
 
@@ -108,15 +87,4 @@ export class FormComponent implements OnInit {
     }
     this.shared.openSnackBar(snackBarMsg, 'Close', 2000);
   }
-
-  //#region Sign Up Logic
-  // this.crudMethods.postMethod(`${this.signUpAuthUrl}${this.apiKey}`, {
-  //   email: form.value.email,
-  //   password: form.value.password,
-  //   returnSecureToken: true
-  // }).subscribe(res => {
-  //   console.log(res);
-  //   this.buttonLoadingShow = false;
-  // })
-  //#endregion
 }

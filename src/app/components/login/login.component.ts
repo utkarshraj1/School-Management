@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 import { CrudMethodsService } from 'src/app/shared/services/crud-methods.service';
 import { DataServiceService } from 'src/app/shared/services/data-service.service';
 import { SharedMethodsService } from 'src/app/shared/services/shared-methods.service';
-import { ILoginCredentials } from './models/loginCredentials';
-import { firebase_urls } from 'src/app/shared/static/important-urls';
 
 @Component({
   selector: 'app-login',
