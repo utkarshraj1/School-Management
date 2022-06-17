@@ -3,6 +3,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedMethodsService } from 'src/app/shared/services/shared-methods.service';
 import { ILoginCredentials } from '../../models/loginCredentials';
 import { mat_icons } from 'src/app/shared/static/material-icons';
+import { API_URLS } from 'src/app/shared/static/important-urls';
+import { environment } from 'src/environments/environment';
 import { CrudMethodsService } from 'src/app/shared/services/crud-methods.service';
 
 @Component({
@@ -48,6 +50,21 @@ export class FormComponent implements OnInit {
     } else {
       this.buttonLoadingShow = true;
       // Sign in
+      this.crudMethods
+        .postMethod(`${environment.restApi}${API_URLS.login}`, {
+          username: form.value.email,
+          password: form.value.password,
+        })
+        .subscribe(
+          (res: any) => {
+            this.loginCredentials.emit(res);
+            this.buttonLoadingShow = false;
+          },
+          (err) => {
+            this.shared.openSnackBar(err.error.message, 'Close', 2000);
+            this.buttonLoadingShow = false;
+          },
+        );
     }
   }
 
@@ -68,25 +85,5 @@ export class FormComponent implements OnInit {
       returnMsg = 'Please check the hint for password.';
     }
     return returnMsg;
-  }
-
-  /**
-   * gets the error from auth server and opens snackbar with custom error message, returns void
-   * @param errorMsg - error message from authentication server
-   */
-  errorMessageShow(errorMsg: string): void {
-    let snackBarMsg = '';
-    switch (errorMsg) {
-      case 'EMAIL_NOT_FOUND':
-        snackBarMsg = `Email doesn't exists.`;
-        break;
-      case 'INVALID_PASSWORD':
-        snackBarMsg = `Password is invalid.`;
-        break;
-      default:
-        snackBarMsg = 'Something is not right, please check your credentials.';
-        break;
-    }
-    this.shared.openSnackBar(snackBarMsg, 'Close', 2000);
   }
 }
