@@ -8,28 +8,33 @@ import { CrudMethodsService } from 'src/app/shared/services/crud-methods.service
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-
   buttonLoadingShow: boolean;
   loginForm: FormGroup;
   materialIcons: any;
 
-  @Output() loginCredentials: EventEmitter<ILoginCredentials> = new EventEmitter<ILoginCredentials>();
+  @Output() loginCredentials: EventEmitter<ILoginCredentials> =
+    new EventEmitter<ILoginCredentials>();
 
-  constructor(private shared: SharedMethodsService,
-    private crudMethods: CrudMethodsService) { }
+  constructor(
+    private shared: SharedMethodsService,
+    private crudMethods: CrudMethodsService,
+  ) {}
 
   ngOnInit(): void {
     this.buttonLoadingShow = false;
     this.loginForm = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null,
-        [Validators.required, Validators.maxLength(6), Validators.minLength(6)])
+      password: new FormControl(null, [
+        Validators.required,
+        Validators.maxLength(6),
+        Validators.minLength(6),
+      ]),
     });
     this.materialIcons = {
-      ...mat_icons
+      ...mat_icons,
     };
   }
 
@@ -40,8 +45,7 @@ export class FormComponent implements OnInit {
   loginClickHandler(form: any): void {
     if (!form.valid) {
       this.shared.openSnackBar(this.formValidity(form), 'Close', 2000);
-    }
-    else {
+    } else {
       this.buttonLoadingShow = true;
       // Sign in
     }
@@ -58,11 +62,9 @@ export class FormComponent implements OnInit {
     let returnMsg = '';
     if (emailIsInvalid && passwordIsInvalid) {
       returnMsg = 'All fields are mandatory.';
-    }
-    else if (emailIsInvalid && !passwordIsInvalid) {
+    } else if (emailIsInvalid && !passwordIsInvalid) {
       returnMsg = 'Please check the hint for email.';
-    }
-    else if (!emailIsInvalid && passwordIsInvalid) {
+    } else if (!emailIsInvalid && passwordIsInvalid) {
       returnMsg = 'Please check the hint for password.';
     }
     return returnMsg;

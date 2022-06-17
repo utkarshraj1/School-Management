@@ -1,26 +1,23 @@
-// Variables
-// $primary-color: #9970DE;
-// $text-color-white: #FFFFFF;
-@import '../../../../../assets/scss/color-variables';
+@import "../../../../../assets/scss/color-variables";
 
 .form-controls {
-    .heading {
-        font-family: 'Hubballi', cursive;
-    }
+  .heading {
+    font-family: "Hubballi", cursive;
+  }
 
-    .enter-button {
-        background-color: $light-purple;
-        color: $white;
-        width: 100px;
-    }
+  .enter-button {
+    background-color: $light-purple;
+    color: $white;
+    width: 100px;
+  }
 
-    .loading-icon {
-        margin-left: 8px;
+  .loading-icon {
+    margin-left: 8px;
 
-        .mat-spinner {
-            ::ng-deep circle {
-                stroke: $white;
-            }
-        }
+    .mat-spinner {
+      ::ng-deep circle {
+        stroke: $white;
+      }
     }
+  }
 }

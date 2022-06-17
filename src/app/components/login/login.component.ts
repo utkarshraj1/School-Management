@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
     private crudMethods: CrudMethodsService,
     private dataService: DataServiceService,
     private shared: SharedMethodsService,
-    private router: Router
-  ) { }
+    private router: Router,
+  ) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }

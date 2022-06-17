@@ -1,7 +1,7 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { MatIconModule } from "@angular/material/icon";
+import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,33 +20,28 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 const MaterialItemModules = [
-    MatIconModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    MatSnackBarModule,
-    MatTooltipModule,
-    MatDividerModule,
-    MatGridListModule,
-    MatDialogModule,
-    MatMenuModule,
-    MatCardModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatProgressBarModule
+  MatIconModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatButtonModule,
+  MatProgressSpinnerModule,
+  MatSnackBarModule,
+  MatTooltipModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatDialogModule,
+  MatMenuModule,
+  MatCardModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatProgressBarModule,
 ];
 
 @NgModule({
-    declarations: [],
-    imports: [
-        CommonModule,
-        MaterialItemModules
-    ],
-    exports: [
-        MaterialItemModules
-    ]
+  declarations: [],
+  imports: [CommonModule, MaterialItemModules],
+  exports: [MaterialItemModules],
 })
-export class MaterialModule { }
+export class MaterialModule {}

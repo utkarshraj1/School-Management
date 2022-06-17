@@ -1,5 +1,5 @@
 export interface IStudentDetails {
-    name: string;
-    class: string;
-    email: string;
+  name: string;
+  class: string;
+  email: string;
 }

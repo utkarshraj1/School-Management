@@ -1,10 +1,10 @@
 export interface ILoginCredentials {
-    displayName: string;
-    email: string;
-    expiresIn: string;
-    idToken: string;
-    kind: string;
-    localId: string;
-    refreshToken: string;
-    registered: boolean;
+  displayName: string;
+  email: string;
+  expiresIn: string;
+  idToken: string;
+  kind: string;
+  localId: string;
+  refreshToken: string;
+  registered: boolean;
 }
