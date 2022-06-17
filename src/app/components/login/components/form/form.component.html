@@ -1,29 +1,38 @@
 <div class="form-container">
-    <h2 class="text-center heading">Sign in to your account</h2>
-    <div class="form-controls text-center">
-        <form [formGroup]="loginForm" (ngSubmit)="loginClickHandler(loginForm)">
-            <p class="input-field">
-                <mat-form-field appearance="outline">
-                    <mat-label>User Id</mat-label>
-                    <input matInput placeholder="Ex. user@school.com" formControlName="email">
-                    <mat-icon matSuffix>{{materialIcons.email}}</mat-icon>
-                    <mat-hint>Enter your user id</mat-hint>
-                </mat-form-field>
-            </p>
-            <p class="input-field">
-                <mat-form-field appearance="outline">
-                    <mat-label>Password</mat-label>
-                    <input type="password" matInput placeholder="Ex. 57wh34" formControlName="password">
-                    <mat-icon matSuffix>{{materialIcons.password}}</mat-icon>
-                    <mat-hint>Enter your 6 digit password</mat-hint>
-                </mat-form-field>
-            </p>
-            <button type="submit" mat-raised-button class="text-center enter-button">
-                Log In
-                <mat-icon *ngIf="buttonLoadingShow" class="loading-icon">
-                    <mat-spinner diameter="20"></mat-spinner>
-                </mat-icon>
-            </button>
-        </form>
-    </div>
+  <h2 class="text-center heading">Sign in to your account</h2>
+  <div class="form-controls text-center">
+    <form [formGroup]="loginForm" (ngSubmit)="loginClickHandler(loginForm)">
+      <p class="input-field">
+        <mat-form-field appearance="outline">
+          <mat-label>User Id</mat-label>
+          <input
+            matInput
+            placeholder="Ex. user@school.com"
+            formControlName="email"
+          />
+          <mat-icon matSuffix>{{ materialIcons.email }}</mat-icon>
+          <mat-hint>Enter your user id</mat-hint>
+        </mat-form-field>
+      </p>
+      <p class="input-field">
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            type="password"
+            matInput
+            placeholder="Ex. 57wh34"
+            formControlName="password"
+          />
+          <mat-icon matSuffix>{{ materialIcons.password }}</mat-icon>
+          <mat-hint>Enter your 6 digit password</mat-hint>
+        </mat-form-field>
+      </p>
+      <button type="submit" mat-raised-button class="text-center enter-button">
+        Log In
+        <mat-icon *ngIf="buttonLoadingShow" class="loading-icon">
+          <mat-spinner diameter="20"></mat-spinner>
+        </mat-icon>
+      </button>
+    </form>
+  </div>
 </div>

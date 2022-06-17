@@ -1,20 +1,20 @@
 <div class="dashboard-header">
-    <app-header></app-header>
+  <app-header></app-header>
 </div>
 <div class="dashboard-container d-flex">
-    <div class="side-nav">
-        <app-side-nav [sidenav]="sideNavRouteDetails"></app-side-nav>
-    </div>
-    <div class="content-container">
-        <router-outlet></router-outlet>
-    </div>
+  <div class="side-nav">
+    <app-side-nav [sidenav]="sideNavRouteDetails"></app-side-nav>
+  </div>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 <div class="dashboard-footer">
-    <app-footer></app-footer>
+  <app-footer></app-footer>
 </div>
 
 <!-- Loading Starts -->
 <ng-container *ngIf="loading">
-    <app-loading-box></app-loading-box>
+  <app-loading-box></app-loading-box>
 </ng-container>
 <!-- Loading Ends -->
