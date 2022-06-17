@@ -1,5 +1,5 @@
 // Variables
-$backdrop-color: rgba(153, 112, 222, 0.31);
+@import '../../../../assets/scss/color-variables';
 
 .loading {
   top: 48%;
@@ -31,7 +31,7 @@ $backdrop-color: rgba(153, 112, 222, 0.31);
   top: calc(-10px * 2 / 3);
   margin-right: calc(10px / 3);
   margin-top: calc(10px / 3);
-  background: #9970de;
+  background: $light-purple;
   float: left;
   position: relative;
   opacity: 0;

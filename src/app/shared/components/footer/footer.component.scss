@@ -1,15 +1,13 @@
-// Variables
-$primary-color: #9970de;
+@import '../../../../assets/scss/color-variables';
 
 .footer-item {
-  background-color: white;
-  height: 50px;
+  margin-top: 6px;
   font-family: 'Hubballi', cursive;
   .social-link {
     text-decoration: none;
     color: black;
     &:hover {
-      color: $primary-color;
+      color: $light-purple;
     }
   }
 }

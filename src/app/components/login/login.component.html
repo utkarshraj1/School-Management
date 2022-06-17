@@ -5,14 +5,13 @@
   <div class="body px-4 d-flex align-items-center">
     <div></div>
     <div class="form">
-      <!--(loginCredentials)="loginCredentialsHandler($event)"-->
-      <app-form></app-form>
+      <app-form (loginCredentials)="loginCredentialsHandler($event)"></app-form>
     </div>
     <div class="card-list">
       <app-card></app-card>
     </div>
   </div>
 </div>
-<div class="footer pl-4">
+<div class="footer position-sticky pl-4">
   <app-footer></app-footer>
 </div>
