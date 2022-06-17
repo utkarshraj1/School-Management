@@ -16,23 +16,24 @@ $backdrop-color: rgba(153, 112, 222, 0.31);
   background-color: $backdrop-color;
   animation: backdrop-effect 0.5s ease 0s 1 normal none;
 }
-.self-building-square-spinner, .self-building-square-spinner * {
+.self-building-square-spinner,
+.self-building-square-spinner * {
   box-sizing: border-box;
 }
 .self-building-square-spinner {
   height: 40px;
   width: 40px;
-  top: calc( -10px * 2 / 3);
+  top: calc(-10px * 2 / 3);
 }
 .self-building-square-spinner .square {
   height: 10px;
   width: 10px;
-  top: calc( -10px * 2 / 3);
+  top: calc(-10px * 2 / 3);
   margin-right: calc(10px / 3);
   margin-top: calc(10px / 3);
-  background: #9970DE;
+  background: #9970de;
   float: left;
-  position:relative;
+  position: relative;
   opacity: 0;
   animation: self-building-square-spinner 6s infinite;
 }
@@ -63,7 +64,7 @@ $backdrop-color: rgba(153, 112, 222, 0.31);
 .self-building-square-spinner .square:nth-child(9) {
   animation-delay: calc(300ms * 2);
 }
-.self-building-square-spinner .clear{
+.self-building-square-spinner .clear {
   clear: both;
 }
 

@@ -1,23 +1,23 @@
 .results-page {
-    min-height: 100vh;
-    .year-filter {
-        .class-dropdown {
-            width: 100px;
-        }
+  min-height: 100vh;
+  .year-filter {
+    .class-dropdown {
+      width: 100px;
     }
-    .table-container {
-        width: 75%;
-        .results-section {
-            background: white;
-            border-radius: 20px;
-        }
+  }
+  .table-container {
+    width: 75%;
+    .results-section {
+      background: white;
+      border-radius: 20px;
     }
+  }
 }
 .data-container {
-    width: 280px;
-    background: white;
-    border-radius: 20px;
-    position: absolute;
-    right: 266px;
-    top: 221px;
+  width: 280px;
+  background: white;
+  border-radius: 20px;
+  position: absolute;
+  right: 266px;
+  top: 221px;
 }

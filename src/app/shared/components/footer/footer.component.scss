@@ -1,15 +1,15 @@
 // Variables
-$primary-color: #9970DE;
+$primary-color: #9970de;
 
 .footer-item {
-    background-color: white;
-    height: 50px;
-    font-family: 'Hubballi', cursive;
-    .social-link {
-        text-decoration: none;
-        color: black;
-        &:hover {
-            color: $primary-color;
-        }
+  background-color: white;
+  height: 50px;
+  font-family: 'Hubballi', cursive;
+  .social-link {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: $primary-color;
     }
+  }
 }
