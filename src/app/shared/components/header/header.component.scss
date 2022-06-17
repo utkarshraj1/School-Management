@@ -1,38 +1,38 @@
 // variables
 $padding-x: 22px;
-$color: #F5F6FA;
+$color: #f5f6fa;
 
 .header-container {
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    padding-top: 28px;
-    border-color: 1px solid $color;
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  padding-top: 28px;
+  border-color: 1px solid $color;
 
-    .logo-container {
-        padding-left: $padding-x;
+  .logo-container {
+    padding-left: $padding-x;
+  }
+
+  .profile-container {
+    padding-right: $padding-x;
+  }
+
+  .profile-list {
+    .details {
+      font-family: 'Varela Round', sans-serif;
     }
+  }
 
-    .profile-container {
-        padding-right: $padding-x;
+  .avatar-image {
+    border-radius: 25px;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.16);
     }
+  }
 
-    .profile-list {
-        .details {
-            font-family: 'Varela Round', sans-serif;
-        }
-    }
-
-    .avatar-image {
-        border-radius: 25px;
-        cursor: pointer;
-
-        &:hover {
-            border: 1px solid rgba(0, 0, 0, 0.16);
-        }
-    }
-
-    .mat-panel {
-        min-width: 180px;
-    }
+  .mat-panel {
+    min-width: 180px;
+  }
 }

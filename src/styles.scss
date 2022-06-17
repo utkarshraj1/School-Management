@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-html, body { height: 100%; }
-body { margin: 0; padding: 0; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 
 // Color Variables

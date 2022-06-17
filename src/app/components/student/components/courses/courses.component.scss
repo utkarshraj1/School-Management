@@ -1,11 +1,10 @@
 .course-container {
-    min-height: 90vh;
-    width: 100%;
+  min-height: 90vh;
+  width: 100%;
 }
 
-
 @media screen and (max-width: 540px) {
-    .course-container {
-        justify-content: center;
-    }
+  .course-container {
+    justify-content: center;
+  }
 }
