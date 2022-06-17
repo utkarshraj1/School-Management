@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataServiceService {
-
   // Won't be using this userDetails, it's just for the reference purposes
   userDetails: any;
 
-  constructor() { }
+  constructor() {}
 }

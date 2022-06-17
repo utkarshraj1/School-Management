@@ -8,9 +8,8 @@ describe('NoticeBoardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NoticeBoardComponent ]
-    })
-    .compileComponents();
+      declarations: [NoticeBoardComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

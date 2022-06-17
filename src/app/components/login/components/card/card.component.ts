@@ -5,16 +5,16 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  providers: [NgbCarouselConfig]
+  providers: [NgbCarouselConfig],
 })
 export class CardComponent implements OnInit {
-
   images: Array<any>;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    this.images = ['carousalimg1', 'carousalimg2'].map((n) => `../../../../../assets/carousals/${n}.png`);
+    this.images = ['carousalimg1', 'carousalimg2'].map(
+      (n) => `../../../../../assets/carousals/${n}.png`,
+    );
   }
-
 }

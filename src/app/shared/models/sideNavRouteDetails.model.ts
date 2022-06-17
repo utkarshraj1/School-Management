@@ -1,5 +1,5 @@
 export interface ISideNavRouteDetails {
-    name: string,
-    icon: string,
-    routerVal: string,
+  name: string;
+  icon: string;
+  routerVal: string;
 }

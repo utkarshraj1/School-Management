@@ -1,4 +1,4 @@
 export const mat_icons = {
-    email: 'account_circle',
-    password: 'password',
-}
+  email: 'account_circle',
+  password: 'password',
+};

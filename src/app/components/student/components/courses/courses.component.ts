@@ -5,16 +5,15 @@ import { IDataCardDetails } from '../../../../shared/models/dataCardDetails';
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.scss']
+  styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-
   dataColumns: any;
   rowData: any;
 
   coursesData: Array<IDataCardDetails>;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     const resData: ICourseDetails[] = [
@@ -25,7 +24,7 @@ export class CoursesComponent implements OnInit {
         courseAttendance: 22,
         courseTotalClass: 20,
         courseInternalMarks: 22,
-        courseTotalInternalMarks: 30
+        courseTotalInternalMarks: 30,
       },
       {
         courseCode: 'SC12',
@@ -34,7 +33,7 @@ export class CoursesComponent implements OnInit {
         courseAttendance: 22,
         courseTotalClass: 20,
         courseInternalMarks: 22,
-        courseTotalInternalMarks: 30
+        courseTotalInternalMarks: 30,
       },
       {
         courseCode: 'SS12',
@@ -43,7 +42,7 @@ export class CoursesComponent implements OnInit {
         courseAttendance: 22,
         courseTotalClass: 20,
         courseInternalMarks: 22,
-        courseTotalInternalMarks: 30
+        courseTotalInternalMarks: 30,
       },
       {
         courseCode: 'EN12',
@@ -52,7 +51,7 @@ export class CoursesComponent implements OnInit {
         courseAttendance: 22,
         courseTotalClass: 20,
         courseInternalMarks: 22,
-        courseTotalInternalMarks: 30
+        courseTotalInternalMarks: 30,
       },
       {
         courseCode: 'HIN12',
@@ -61,9 +60,9 @@ export class CoursesComponent implements OnInit {
         courseAttendance: 22,
         courseTotalClass: 20,
         courseInternalMarks: 22,
-        courseTotalInternalMarks: 30
-      }
-    ]
+        courseTotalInternalMarks: 30,
+      },
+    ];
     this.coursesData = resData.map((course: ICourseDetails) => {
       return {
         code: course.courseCode,
@@ -75,16 +74,15 @@ export class CoursesComponent implements OnInit {
           {
             icon: 'school',
             value: `${course.courseAttendance}/${course.courseTotalClass}`,
-            tooltipValue: 'Attendance'
+            tooltipValue: 'Attendance',
           },
           {
             icon: 'percent',
             value: `${course.courseInternalMarks}/${course.courseTotalInternalMarks}`,
-            tooltipValue: 'Internal Assessment'
-          }
+            tooltipValue: 'Internal Assessment',
+          },
         ],
-      }
+      };
     });
   }
-
 }

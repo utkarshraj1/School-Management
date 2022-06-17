@@ -1,5 +1,5 @@
 export interface ICourseTable {
-    position: number,
-    course: string,
-    teacher: string
+  position: number;
+  course: string;
+  teacher: string;
 }
