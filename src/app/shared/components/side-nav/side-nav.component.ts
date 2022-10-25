@@ -13,5 +13,8 @@ export class SideNavComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.sideNavRouteDetails);
+    this.routeDetails = this.sideNavRouteDetails;
+  }
 }

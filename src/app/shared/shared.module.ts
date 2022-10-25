@@ -14,6 +14,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { NoticeBoardComponent } from './components/notice-board/notice-board.component';
 import { RouterModule } from '@angular/router';
 import { DataCardComponent } from './components/data-card/data-card.component';
+import { CalenderComponent } from './components/calender/calender.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DataCardComponent } from './components/data-card/data-card.component';
     SideNavComponent,
     NoticeBoardComponent,
     DataCardComponent,
+    CalenderComponent,
   ],
   imports: [CommonModule, MaterialModule, HttpClientModule, RouterModule],
   exports: [
@@ -42,6 +44,7 @@ import { DataCardComponent } from './components/data-card/data-card.component';
     SideNavComponent,
     NoticeBoardComponent,
     DataCardComponent,
+    CalenderComponent,
   ],
   providers: [],
 })

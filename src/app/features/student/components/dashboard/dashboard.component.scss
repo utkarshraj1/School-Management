@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  min-height: 90vh;
+  .row {
+    row-gap: 10px;
+  }
+  .border-test {
+    border: 1px solid black;
+  }
+}
