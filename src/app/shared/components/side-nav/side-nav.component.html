@@ -1,1 +1,22 @@
-<div class="side-nav-container"></div>
+<div class="side-nav-container">
+  <div class="route-container d-flex justify-content-around align-items-center">
+    <div *ngFor="let routeData of routeDetails">
+      <button
+        mat-icon-button
+        [matTooltip]="routeData.name"
+        matTooltipPosition="left"
+      >
+        <a
+          class="anchor"
+          [routerLink]="[routeData.routerVal]"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <mat-icon>
+            {{ routeData.icon }}
+          </mat-icon>
+        </a>
+      </button>
+    </div>
+  </div>
+</div>

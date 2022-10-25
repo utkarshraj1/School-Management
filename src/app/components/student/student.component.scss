@@ -1,8 +1,7 @@
-// variables
-$color: #f5f6fa;
+@import '../../../assets/scss/_color-variables';
 
 * {
-  background-color: $color;
+  background-color: $dashboard-background;
 }
 .dashboard-header {
   position: sticky;
@@ -12,9 +11,17 @@ $color: #f5f6fa;
 .dashboard-container {
   width: 100%;
 }
-.side-nav {
-  width: 80px;
+.dashboard-footer {
+  background-color: white;
+  bottom: 0;
 }
+
 .content-container {
-  width: calc(100% - 80px);
+  width: 100%;
+}
+
+@media screen and (max-width: 820px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
 }

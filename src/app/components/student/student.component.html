@@ -2,14 +2,13 @@
   <app-header></app-header>
 </div>
 <div class="dashboard-container d-flex">
-  <div class="side-nav">
-    <app-side-nav [sidenav]="sideNavRouteDetails"></app-side-nav>
-  </div>
+  <app-side-nav [sidenav]="sideNavRouteDetails"></app-side-nav>
   <div class="content-container">
     <router-outlet></router-outlet>
+    <!-- <div>Dashboard content will go here</div> -->
   </div>
 </div>
-<div class="dashboard-footer">
+<div class="position-fixed w-100 text-center dashboard-footer">
   <app-footer></app-footer>
 </div>
 

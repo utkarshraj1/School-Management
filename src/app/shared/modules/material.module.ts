@@ -15,9 +15,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 const MaterialItemModules = [
   MatIconModule,
@@ -37,6 +38,8 @@ const MaterialItemModules = [
   MatRippleModule,
   MatSelectModule,
   MatProgressBarModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 ];
 
 @NgModule({
