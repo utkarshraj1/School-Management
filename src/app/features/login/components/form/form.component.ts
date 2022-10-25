@@ -2,8 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedMethodsService } from 'src/app/shared/services/shared-methods.service';
 import { ILoginCredentials } from '../../models/loginCredentials';
-import { mat_icons } from 'src/app/shared/static/material-icons';
-import { API_URLS } from 'src/app/shared/static/important-urls';
+import { MatIcons } from 'src/app/shared/static/material-icons';
+import { ApiUrls } from 'src/app/shared/static/api-urls';
 import { environment } from 'src/environments/environment';
 import { CrudMethodsService } from 'src/app/shared/services/crud-methods.service';
 
@@ -36,7 +36,7 @@ export class FormComponent implements OnInit {
       ]),
     });
     this.materialIcons = {
-      ...mat_icons,
+      ...MatIcons,
     };
   }
 
@@ -51,7 +51,7 @@ export class FormComponent implements OnInit {
       this.buttonLoadingShow = true;
       // Sign in
       this.crudMethods
-        .postMethod(`${environment.restApi}${API_URLS.login}`, {
+        .postMethod(`${environment.restApi}${ApiUrls.SIGNIN}`, {
           username: form.value.email,
           password: form.value.password,
         })

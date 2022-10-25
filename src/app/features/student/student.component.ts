@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ISideNavRouteDetails } from 'src/app/shared/models/sideNavRouteDetails.model';
+import { ISideNavRouteDetails } from 'src/app/shared/models/sidenav-route-details.model';
+import { MatIcons } from 'src/app/shared/static/material-icons';
 
 @Component({
   selector: 'app-student',
@@ -20,14 +21,22 @@ export class StudentComponent implements OnInit {
     }, 3000);
 
     this.sideNavRouteDetails = [
-      { name: 'Dashboard', icon: 'dashboard', routerVal: '/student/' },
-      { name: 'Courses', icon: 'auto_stories', routerVal: '/student/courses' },
+      { name: 'Dashboard', icon: MatIcons.DASHBOARD, routerVal: '/student/' },
+      {
+        name: 'Courses',
+        icon: MatIcons.COURSES,
+        routerVal: '/student/courses',
+      },
       {
         name: 'Exam Results',
-        icon: 'fact_check',
+        icon: MatIcons.RESULTS,
         routerVal: '/student/exam-results',
       },
-      { name: 'Personal Info', icon: 'portrait', routerVal: '/student/info' },
+      {
+        name: 'Personal Info',
+        icon: MatIcons.PERSONAL,
+        routerVal: '/student/info',
+      },
     ];
   }
 }

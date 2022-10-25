@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ISideNavRouteDetails } from '../../models/sideNavRouteDetails.model';
+import { ISideNavRouteDetails } from '../../models/sidenav-route-details.model';
 
 @Component({
   selector: 'app-side-nav',
@@ -14,7 +14,6 @@ export class SideNavComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // console.log(this.sideNavRouteDetails);
     this.routeDetails = this.sideNavRouteDetails;
   }
 }

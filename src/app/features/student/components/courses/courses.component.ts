@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ICourseDetails } from '../../models/courseDetails';
-import { IDataCardDetails } from '../../../../shared/models/dataCardDetails';
+import { ICourseDetails } from '../../models/course-details';
+import { IDataCardDetails } from '../../../../shared/models/datacard-details';
 
 @Component({
   selector: 'app-courses',

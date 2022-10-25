@@ -7,7 +7,7 @@ export const chartColors = {
     main: 'rgba(239, 83, 80, 0.75)',
     hover: 'rgba(239, 83, 80, 1)',
   },
-  'line-chart': {
+  lineChart: {
     line: 'rgba(153, 112, 222, 1)',
     point: {
       main: 'rgba(183, 28, 28, 0.75)',

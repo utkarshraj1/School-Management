@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IDataCardDetails } from 'src/app/shared/models/dataCardDetails';
+import { IDataCardDetails } from 'src/app/shared/models/datacard-details';
 
 @Component({
   selector: 'app-data-card',
